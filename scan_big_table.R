@@ -45,11 +45,13 @@ detect_data_range_start_row_func <-function( selected_sheet, col_name_list )
   }
 }
 
+simpleCap <- function( x ) 
 {
   s <- strsplit( x, " " )[[1]]
   paste( toupper( substring( s, 1, 1 ) ), substring( s, 2 ), sep = "", collapse = " " )
 }
 
+robust_process_date_func <- function( x )
 {
   
   # get summary of date x
